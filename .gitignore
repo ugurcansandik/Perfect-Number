@@ -1,52 +1,22 @@
-# Prerequisites
-*.d
+#include <iostream>
+#include <cmath>
 
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
+using namespace std;
 
-# Linker output
-*.ilk
-*.map
-*.exp
+main() {
+	
+	int number,temp,result=0;
+	
+	printf("Please enter a number.\n"); scanf("%d",&number);
+	
+	for(temp=1;temp<number;temp++){
+		if((number%temp)==0)
+			result+=temp;
+	}
+	if(result==number)
+		printf("Number is a perfect number.\n");
+	else
+		printf("Number is not a perfect number.");
 
-# Precompiled Headers
-*.gch
-*.pch
-
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
-
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
-
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
-
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
-
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
+	return 0;
+}
